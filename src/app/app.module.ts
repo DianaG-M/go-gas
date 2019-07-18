@@ -5,10 +5,13 @@ import { AppComponent } from './app.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { NavComponent } from './components/shared/nav/nav.component';
 import { CardsComponent } from './components/shared/cards/cards.component';
+import { HomeComponent } from './components/home/home.component';
 
 // Service
 import { LocationService } from './providers/location.service';
-import { HomeComponent } from './components/home/home.component';
+
+// Routes
+import { FeatureRoutingModule } from './app.routes';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,9 @@ import { HomeComponent } from './components/home/home.component';
     HomeComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FeatureRoutingModule
+
   ],
   providers: [
     LocationService
