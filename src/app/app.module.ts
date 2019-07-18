@@ -9,6 +9,10 @@ import { CardsComponent } from './components/shared/cards/cards.component';
 // Service
 import { LocationService } from './providers/location.service';
 import { HomeComponent } from './components/home/home.component';
+import { MapsComponent } from './components/shared/maps/maps.component';
+
+//key map
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -16,10 +20,14 @@ import { HomeComponent } from './components/home/home.component';
     FooterComponent,
     NavComponent,
     CardsComponent,
-    HomeComponent
+    HomeComponent,
+    MapsComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyD-G_RkDLqUzDLIa1x_2P694gwsqBHLeUo'
+    })
   ],
   providers: [
     LocationService
