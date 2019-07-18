@@ -8,13 +8,15 @@ import { CardsComponent } from './components/shared/cards/cards.component';
 
 // Service
 import { LocationService } from './providers/location.service';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     NavComponent,
-    CardsComponent
+    CardsComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule
