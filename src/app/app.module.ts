@@ -14,6 +14,10 @@ import { HomeComponent } from './components/home/home.component';
 import { LocationService } from './providers/location.service';
 import { LoginService } from './providers/login.service';
 
+
+// Routes
+import { FeatureRoutingModule } from './app.routes';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +28,9 @@ import { LoginService } from './providers/login.service';
     LoginComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FeatureRoutingModule
+
   ],
   providers: [
     LocationService,
