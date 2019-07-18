@@ -8,12 +8,10 @@ import { LocationService } from '../../providers/location.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-situation: any = [];
   constructor(private location: LocationService) {
    }
 
   ngOnInit() {
-    console.log(this.location.getPlaces());
   }
 
 }
