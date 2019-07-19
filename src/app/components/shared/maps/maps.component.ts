@@ -29,7 +29,7 @@ export class MapsComponent implements OnInit {
   }
 
   getAllData() {
-    this.router.navigate(['gasolineras']);
+    this.router.navigate(['home/gasolinera']);
   }
 
 }
