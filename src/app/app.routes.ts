@@ -2,7 +2,10 @@ import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 
 import { HomeComponent } from './components/home/home.component';
+import { MapsComponent } from './components/shared/maps/maps.component';
 import { LoginComponent } from './components/login/login.component';
+
+
 /* import { Name2Component } from './';
 import { Name3Component } from './';
 import { Name4Component } from './';
@@ -11,8 +14,8 @@ import { PageNotFoundComponent } from './'; */
 const routes: Routes = [
     { path: 'login', component: LoginComponent},
     { path: 'home', component: HomeComponent,
-children:[
-    { path: 'inicio', component:}
+        children: [
+    { path: 'inicio', component: MapsComponent }
 ] },
     /*{ path: 'path4', component: Name4Component }, */
     { path: '**', pathMatch: 'full', redirectTo: 'login' },

@@ -8,21 +8,16 @@ import { AgmCoreModule } from '@agm/core';
 })
 export class MapsComponent implements OnInit {
 
-  lat: number = 19.432608;
-  lng: number = -99.133209;
+  lat = 19.432608;
+  lng = -99.133209;
 
-  zoom: number=9;
+  zoom = 9;
 
-  mapClick(event){
- console.log(event);
- 
+  mapClick(event) {
+    console.log(event);
   }
-  constructor(private keyMap: AgmCoreModule){
-    
-  }
-  ngOnInit() {
-   
-    
-  }
+  constructor(private keyMap: AgmCoreModule) {}
+
+  ngOnInit() { }
 
 }
