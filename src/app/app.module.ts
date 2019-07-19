@@ -26,6 +26,8 @@ import { AgmCoreModule } from '@agm/core';
 // Routes
 import { FeatureRoutingModule } from './app.routes';
 import { LoginComponent } from './components/login/login.component';
+import { GasStationComponent } from './components/gas-station/gas-station.component';
+import { GasStationsComponent } from './components/gas-stations/gas-stations.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { LoginComponent } from './components/login/login.component';
     CardsComponent,
     HomeComponent,
     MapsComponent,
-    LoginComponent
+    LoginComponent,
+    GasStationComponent,
+    GasStationsComponent
   ],
   imports: [
     BrowserModule,
