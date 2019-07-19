@@ -1,6 +1,6 @@
 import { Component} from '@angular/core';
 import { Router } from '@angular/router';
-import {LoginService} from "../../providers/login.service";
+import {LoginService} from '../../providers/login.service';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +12,7 @@ export class LoginComponent  {
   constructor(private router: Router,
               public _ls: LoginService) { }
 
-  
+
 
   ingresar( proveedor: string) {
     console.log(proveedor);
