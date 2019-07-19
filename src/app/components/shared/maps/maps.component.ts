@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { OnInit, Component } from '@angular/core';
 import { LocationService } from '../../../providers/location.service';
-import { LoginService } from "../../../providers/login.service";
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,8 +7,8 @@ import { Router } from '@angular/router';
   templateUrl: './maps.component.html',
   styleUrls: ['./maps.component.css']
 })
-export class MapsComponent implements OnInit {
 
+export class MapsComponent implements OnInit {
   lat = 19.432608;
   lng = -99.133209;
 
@@ -17,10 +16,8 @@ export class MapsComponent implements OnInit {
 
   arrMarkers: any[] = [];
 
-  constructor( private markers: LocationService,
-               private router: Router,
-               public _ls:LoginService) {
-  }
+  constructor(private markers: LocationService,
+              private router: Router) {}
 
   ngOnInit() {
     this.arrMarkers = this.markers.getPlaces();
@@ -31,7 +28,30 @@ export class MapsComponent implements OnInit {
   }
 
   getAllData() {
-    this.router.navigate(['gasolineras']);
+    this.router.navigate(['home/gasolinera']);
   }
 
+  getLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition((position: Position) => {
+        if (position) {
+          console.log('Latitude: ' + position.coords.latitude +
+            'Longitude: ' + position.coords.longitude);
+          this.lat = position.coords.latitude;
+          this.lng = position.coords.longitude;
+          console.log(this.lat);
+          console.log(this.lng);
+        }
+      },
+        (error: PositionError) => console.log(error));
+    } else {
+      alert('Geolocation is not supported by this browser.');
+    }
+  }
+
+
 }
+
+
+
+
