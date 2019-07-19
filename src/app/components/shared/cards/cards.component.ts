@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { LocationService } from '../../../providers/location.service';
 
 
 
@@ -8,13 +9,16 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./cards.component.css']
 })
 export class CardsComponent implements OnInit {
+  mapId: any;
+  mapCooders: any;
 
   @Input () dataGas: any = [];
 
-  constructor() { }
+  constructor(private map: LocationService) { }
 
   ngOnInit() {
   }
+
 
 
 

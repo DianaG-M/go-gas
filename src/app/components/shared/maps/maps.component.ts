@@ -21,6 +21,7 @@ export class MapsComponent implements OnInit {
 
   ngOnInit() {
     this.arrMarkers = this.markers.getPlaces();
+    console.log(this.arrMarkers);
   }
 
   mapClick(event) {
@@ -29,24 +30,6 @@ export class MapsComponent implements OnInit {
 
   getAllData() {
     this.router.navigate(['home/gasolinera']);
-  }
-
-  getLocation() {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition((position: Position) => {
-        if (position) {
-          console.log('Latitude: ' + position.coords.latitude +
-            'Longitude: ' + position.coords.longitude);
-          this.lat = position.coords.latitude;
-          this.lng = position.coords.longitude;
-          console.log(this.lat);
-          console.log(this.lng);
-        }
-      },
-        (error: PositionError) => console.log(error));
-    } else {
-      alert('Geolocation is not supported by this browser.');
-    }
   }
 
 

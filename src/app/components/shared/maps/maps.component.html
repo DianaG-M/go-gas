@@ -1,7 +1,17 @@
 <div>
     <h2>Gas Go</h2>
     <agm-map [latitude]="this.lat" [longitude]="this.lng" [zoom]="zoom">
-        <agm-marker *ngFor="let marker of arrMarkers" [latitude]="marker.location.y" [longitude]="marker.location.x"></agm-marker>
+        <agm-marker *ngFor="let marker of arrMarkers" [latitude]="marker.location.y" [longitude]="marker.location.x" (mouseOver)="onMouseOver(infoWindow)">
+            <agm-info-window>
+                <strong>Name: {{ marker.name }}</strong>
+                <div>
+                    <button class="price btn btn-dark">{{ marker.price.diesel }}</button >
+                    <button class="price btn btn-success">{{ marker.price.premium }}</button >
+                    <button class="price btn btn-danger">{{ marker.price.regular }}</button >
+                </div>
+
+            </agm-info-window>
+        </agm-marker>
     </agm-map>
 </div>
 
