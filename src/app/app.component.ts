@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LoginService } from "./providers/login.service";
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Go gas';
+
+  constructor(public _ls:LoginService) {}
 }
