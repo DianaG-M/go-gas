@@ -1,5 +1,5 @@
 <div>
-    <h2>Gas Go</h2>
+    <br>
     <agm-map [latitude]="this.lat" [longitude]="this.lng" [zoom]="zoom">
         <agm-marker *ngFor="let marker of arrMarkers" [latitude]="marker.location.y" [longitude]="marker.location.x" (mouseOver)="onMouseOver(infoWindow)">
             <agm-info-window>
@@ -14,5 +14,9 @@
         </agm-marker>
     </agm-map>
 </div>
+<br>
 
-<button (click)=getAllData()>Ver más</button>
+
+<button (click)=getAllData() class="mas btn-block">Ver más</button>
+
+<br><br>

@@ -1,31 +1,49 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-    <h1>
-        Welcome to!
-    </h1>
-    <img width="300" alt="Angular Logo" src="../../../assets/images/gota.png">
-</div>
 
-<div class="cow">
-
-    <div class="col-md-12 text-center">
-
-        <p>
-            Ingrese a Go-Gas con su cuenta favorita
-        </p>
-
-        <button type="button" class="btn btn-outline-primary" (click)="ingresar(goMaps('google'))">
-      Google
-    </button>
-
-        <button type="button" class=" btn btn-outline-primary" (click)="ingresar(goMaps('twitter')) ">
-      Twitter
-    </button>
-
-        <button (click)=goMaps()>Omitir registro</button>
-
-
+<body>
+    <div style="text-align:center">
+        <h1>
+            <br>
+            <img src="../../../assets/images/Go-Gas2.png" alt="MDN">
+        </h1>
 
     </div>
 
-</div>
+    <div class="cow">
+
+        <div class="col-md-12 text-center">
+            <br>
+
+            <p class="texto">
+                Inciar Sesión
+            </p>
+            <br>
+
+            <button type="button" class="btn btn-outline-primary login btn-block " (click)="ingresar(goMaps('google'))">
+                    <img src="../../../assets/images/google2.png" alt="MDN" class="img">  Google
+    </button>
+            <br>
+            <br>
+
+            <button type="button" class=" btn btn-outline-primary login btn-block" (click)="ingresar(goMaps('twitter')) ">
+            <img src="../../../assets/images/twitter.png" alt="MDN" class="img">
+      Twitter
+    </button>
+            <br>
+            <br>
+
+            <button (click)=goMaps() class=" btn btn-outline-primary login btn-block">
+                    <img src="../../../assets/images/entrar.png" alt="MDN" class="img">Omitir registro</button>
+
+        </div>
+
+        <br>
+        <br>
+        <p class="texto col-md-12 text-center">
+            *Acepto terminos y condiciones*
+        </p>
+        <br>
+        <br>
+
+    </div>
+</body>
