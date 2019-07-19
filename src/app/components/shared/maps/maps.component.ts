@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LocationService } from '../../../providers/location.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-maps',
@@ -15,25 +16,20 @@ export class MapsComponent implements OnInit {
 
   arrMarkers: any[] = [];
 
-  constructor( private markers: LocationService) {
+  constructor( private markers: LocationService,
+               private router: Router) {
   }
 
   ngOnInit() {
     this.arrMarkers = this.markers.getPlaces();
   }
 
-  /* getData() {
-    this.arrMarkers.forEach(element => {
-      this.lat = element.location.x;
-      console.log(this.lat);
-      this.lat.push(element.location.x);
-      this.lng = element.location.y;
-      console.log(this.lng);
-      this.lng.push(element.location.y);
-    });
-  }*/
   mapClick(event) {
     console.log(event);
+  }
+
+  getAllData() {
+    this.router.navigate(['gasolineras']);
   }
 
 }
