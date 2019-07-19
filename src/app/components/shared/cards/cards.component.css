@@ -1,0 +1,19 @@
+.card {
+    margin: 13px;
+    background-color: #000;
+    background-clip: border-box;
+    border: 8px solid rgba(0, 0, 0, -14.875);
+    border-radius: .25rem;
+}
+
+.card-title {
+    color: white;
+}
+
+.icon-gold {
+    color: gold;
+}
+
+.icon-gray {
+    color: gainsboro;
+}

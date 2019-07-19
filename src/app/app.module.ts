@@ -28,6 +28,7 @@ import { FeatureRoutingModule } from './app.routes';
 import { LoginComponent } from './components/login/login.component';
 import { GasStationComponent } from './components/gas-station/gas-station.component';
 import { GasStationsComponent } from './components/gas-stations/gas-stations.component';
+import { MapComponent } from './components/shared/map/map.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { GasStationsComponent } from './components/gas-stations/gas-stations.com
     MapsComponent,
     LoginComponent,
     GasStationComponent,
-    GasStationsComponent
+    GasStationsComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,
