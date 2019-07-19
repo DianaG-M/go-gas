@@ -7,12 +7,30 @@ import * as firebase from 'firebase/app';
 })
 export class LoginService {
 
-  constructor(public afAuth: AngularFireAuth) { }
+  public usuario: any ={};
+
+  constructor(public afAuth: AngularFireAuth) {
+
+
+        this.afAuth.authState.subscribe( user =>{
+          console.log ('Estado del usuario:',user);
+
+          if(!user){
+            return;
+          }
+
+          this.usuario.nombre= user.displayName;
+          this.usuario.uid = user.uid;
+
+        })
+
+   }
 
   login(proveedor: string) {
     this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
   }
   logout() {
+    this.usuario = {};
     this.afAuth.auth.signOut();
   }
 }
