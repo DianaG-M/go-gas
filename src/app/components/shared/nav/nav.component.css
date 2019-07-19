@@ -1,9 +1,42 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+.buscar {
+    color: goldenrod;
+    border: 3px solid goldenrod;
+}
+
+.nav-link {
+    font-size: 130%;
+}
+
+.hamburgesa {
+    width: 15%;
+    height: 15%;
+}
+
+h2 {
+    color: goldenrod;
+    font-size: 270%;
+}
+
+.navbar {
+    background-image: url("../../../../assets/images/maps2.png");
+    background-size: cover;
+}
+
+.sandwich {
+    color: aliceblue;
+    background-image: url("../../../../assets/images/hamburguesa.png");
+}
+
 .icono {
     height: 70%;
     width: 70%;
     border-radius: 50%;
-    border: 5px solid goldenrod;
+    border: 3px solid white;
+}
+
+a {
+    color: aliceblue;
 }
 
 .nombre {
