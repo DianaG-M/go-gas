@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LocationService } from '../../../providers/location.service';
+import { LoginService } from "../../../providers/login.service";
 import { Router } from '@angular/router';
 
 @Component({
@@ -17,7 +18,8 @@ export class MapsComponent implements OnInit {
   arrMarkers: any[] = [];
 
   constructor( private markers: LocationService,
-               private router: Router) {
+               private router: Router,
+               public _ls:LoginService) {
   }
 
   ngOnInit() {
