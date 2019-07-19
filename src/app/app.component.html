@@ -1,1 +1,13 @@
-<router-outlet></router-outlet>
+<router-outlet *ngIf="!_ls.usuario.uid"></router-outlet>
+
+<div class="col-md-12 text-right" *ngIf="_ls.usuario.uid">
+    <button type="button" class="btn btn-outline-danger" (click)="_ls.logout()">
+        Salir
+    </button>
+</div>
+
+<ul>
+    <li class="text" *ngFor="let item of items | async">
+        {{item.name}}
+    </li>
+</ul>
