@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AgmCoreModule } from '@agm/core';
+import { LocationService } from '../../../providers/location.service';
 
 @Component({
   selector: 'app-maps',
@@ -13,11 +13,27 @@ export class MapsComponent implements OnInit {
 
   zoom = 9;
 
+  arrMarkers: any[] = [];
+
+  constructor( private markers: LocationService) {
+  }
+
+  ngOnInit() {
+    this.arrMarkers = this.markers.getPlaces();
+  }
+
+  /* getData() {
+    this.arrMarkers.forEach(element => {
+      this.lat = element.location.x;
+      console.log(this.lat);
+      this.lat.push(element.location.x);
+      this.lng = element.location.y;
+      console.log(this.lng);
+      this.lng.push(element.location.y);
+    });
+  }*/
   mapClick(event) {
     console.log(event);
   }
-  constructor(private keyMap: AgmCoreModule) {}
-
-  ngOnInit() { }
 
 }
