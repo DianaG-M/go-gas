@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+* {
+    background-color: black;
+}
+
+.texto {
+    color: aliceblue;
+    font-size: 100%;
+}
+
+.login {
+    font-size: 200%;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300%;
+    background-color: aliceblue;
+    border: goldenrod 3px solid;
+    color: black;
+    font-size: 100%;
+}
+
+.img {
+    height: 15%;
+    width: 10%;
+}
