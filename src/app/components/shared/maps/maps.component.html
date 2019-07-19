@@ -1,7 +1,6 @@
 <div>
     <h2>Gas Go</h2>
-
     <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
-        <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+        <agm-marker *ngFor="let marker of arrMarkers " [latitude]="marker.location.y" [longitude]="marker.location.x"></agm-marker>
     </agm-map>
 </div>
